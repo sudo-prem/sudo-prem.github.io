@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-Static portfolio website.
+Static portfolio website
