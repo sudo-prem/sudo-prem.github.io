@@ -1,0 +1,36 @@
+#Education .date 
+{
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  
+  li {
+    padding-top: 0em;
+    list-style-type: none;
+    font-weight: 400;
+  }
+  
+  p {
+    text-align: justify;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    color: #1d3557;
+  }
+  
+  .card {
+    background-color: #e5e5e5;
+    border-radius: 1rem;
+  }
+  
+  img {
+    border:0;
+  }
+  
+  a:hover {text-decoration: none;
+  }
+  
