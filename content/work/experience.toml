@@ -1,0 +1,44 @@
+[[collection]]
+type = "card"
+icon = "/images/logos/oracle.jpeg"
+title = "Oracle"
+subtitle = "Software Developer"
+date = "Jan 2023 – Mar 2025"
+link = "https://www.oracle.com"
+content = """
+- Developed a complete integration of Oracle’s proprietary DataGrid component with Microsoft Excel, creating a reusable library that streamlined development for other engineers (AXCellence Award).
+- Optimized performance of Aconex suite modules by using thread pools for concurrency and progressive loading for lazy UI, cutting load times by about 27% and making workflows more efficient.
+- Participated in customer meetings to brainstorm use cases and turn them into practical, production-ready features.
+- Handled DevOps tasks, including containerizing applications and creating deployment pipelines.
+- Developed a panning canvas from scratch to enable navigation across complex screens using mouse drag.
+"""
+tags = ["backend", "java", "devops", "ui"]
+
+[[collection]]
+type = "card"
+icon = "/images/logos/coral.jpeg"
+title = "Coral Academy"
+subtitle = "Lead Backend Engineer (Part-time)"
+date = "Jun 2024 – Feb 2025"
+link = "https://www.coralacademy.com"
+content = """
+- Led a team of four in backend development for an early-stage K-12 edtech startup.
+- Integrated Stripe for payments and Zoom for calls while optimizing data handling using Supabase, Deno, and PostgreSQL.
+- Designed scalable database schemas and helped architect the application based on product requirements documents (PRDs).
+"""
+tags = ["backend", "deno", "supabase", "postgresql", "stripe", "edtech"]
+
+[[collection]]
+type = "card"
+icon = "/images/logos/assurant.jpeg"
+title = "Assurant"
+subtitle = "Data Analyst Intern"
+date = "May 2022 – Jul 2022"
+link = "https://www.assurant.com/"
+content = """
+- Developed quality control dashboards in Power BI and participated in code reviews.
+- Used a direct query approach to minimize latency when extracting and transforming data from the warehouse.
+"""
+tags = ["data", "analytics", "powerbi"]
+
+
