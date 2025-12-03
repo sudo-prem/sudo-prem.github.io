@@ -1,6 +1,6 @@
 [[collection]]
 type = "card"
-icon = "/images/logos/oracle.jpeg"
+icon = "/img/logos/oracle.jpeg"
 title = "Oracle"
 subtitle = "Software Developer"
 date = "Jan 2023 – Mar 2025"
@@ -16,7 +16,7 @@ tags = ["backend", "java", "devops", "ui"]
 
 [[collection]]
 type = "card"
-icon = "/images/logos/coral.jpeg"
+icon = "/img/logos/coral.jpeg"
 title = "Coral Academy"
 subtitle = "Lead Backend Engineer (Part-time)"
 date = "Jun 2024 – Feb 2025"
@@ -30,7 +30,7 @@ tags = ["backend", "deno", "supabase", "postgresql", "stripe", "edtech"]
 
 [[collection]]
 type = "card"
-icon = "/images/logos/assurant.jpeg"
+icon = "/img/logos/assurant.jpeg"
 title = "Assurant"
 subtitle = "Data Analyst Intern"
 date = "May 2022 – Jul 2022"

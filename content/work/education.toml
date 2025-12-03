@@ -1,6 +1,6 @@
 [[collection]]
 type = "card"
-icon = "/images/logos/usc.jpeg"
+icon = "/img/logos/usc.jpeg"
 title = "University of Southern California"
 link = "https://www.usc.edu"
 subtitle = "M.S. in Computer Science"
@@ -9,7 +9,7 @@ content = ""
 
 [[collection]]
 type = "card"
-icon = "/images/logos/ceg.jpeg"
+icon = "/img/logos/ceg.jpeg"
 title = "College of Engineering, Guindy"
 link = "https://ceg.annauniv.edu/"
 subtitle = "B.Tech in Information Technology"
@@ -18,7 +18,7 @@ content = ""
 
 # [[collection]]
 # type = "card_simple"
-# icon = "/images/logos/mirs.jpeg"
+# icon = "/img/logos/mirs.jpeg"
 # title = "Maharishi International Residential School"
 # content = "Higher Secondary (86%) · Secondary School (CGPA 10/10)"
 # date = "2014-2018"
