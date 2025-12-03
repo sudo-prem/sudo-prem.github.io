@@ -9,7 +9,7 @@ date = "2025"
 type = "card_simple"
 title = "Linear Space Sequence Aligner"
 link = "https://github.com/sudo-prem/sequence-aligner"
-content = "Sequence aligner using Hirschberg's algorithm for O(min(m,n)) space complexity"
+content = "Hirschberg's algorithm for O(min(m,n)) space complexity"
 date = "2024"
 
 [[collection]]
@@ -30,7 +30,7 @@ date = "2023"
 type = "card_simple"
 title = "Data Structures and Algorithms"
 link = "https://github.com/sudo-prem/DSA"
-content = "C++ data structures and algorithms reference and practice repository"
+content = "C++ reference and practice repository"
 date = "2023"
 
 [[collection]]
@@ -40,12 +40,12 @@ link = "https://github.com/sudo-prem/Bin-Classifier"
 content = "Swiftify app using MobileNetV2 for waste classification and bin suggestions"
 date = "2022"
 
-[[collection]]
-type = "card_simple"
-title = "Flask Project Template"
-link = "https://github.com/sudo-prem/flask-project-template"
-content = "Flask web application starter template with sensible defaults"
-date = "2022"
+# [[collection]]
+# type = "card_simple"
+# title = "Flask Project Template"
+# link = "https://github.com/sudo-prem/flask-project-template"
+# content = "Flask web application starter template with sensible defaults"
+# date = "2022"
 
 [[collection]]
 type = "card_simple"
@@ -54,12 +54,12 @@ link = "https://github.com/sudo-prem/covid-vaccinator-bot"
 content = "Telegram bot for finding COVID-19 vaccination slots via Co-WIN API"
 date = "2021"
 
-[[collection]]
-type = "card_simple"
-title = "Heart Disease Classifier"
-link = "https://github.com/sudo-prem/heart-disease-classifier"
-content = "ML model predicting heart disease from clinical parameters with 90% accuracy"
-date = "2021"
+# [[collection]]
+# type = "card_simple"
+# title = "Heart Disease Classifier"
+# link = "https://github.com/sudo-prem/heart-disease-classifier"
+# content = "ML model predicting heart disease from clinical parameters with 90% accuracy"
+# date = "2021"
 
 [[collection]]
 type = "card_simple"
