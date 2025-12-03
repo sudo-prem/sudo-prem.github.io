@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Posts</title>
+	<subtitle>My blog site.</subtitle>
+	<link rel="self" type="application/atom+xml" href="https://sudo-prem.github.io/posts/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://sudo-prem.github.io/posts/"/>
+  
+	<updated>2024-10-27T00:00:00+00:00</updated>
+	
+	<id>https://sudo-prem.github.io/posts/feed.xml</id>
+	<entry xml:lang="en">
+		<title>First Post</title>
+		<published>2024-10-27T00:00:00+00:00</published>
+		<updated>2024-10-27T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://sudo-prem.github.io/posts/first-post/"/>
+		<id>https://sudo-prem.github.io/posts/first-post/</id>
+    
+		<content type="html" xml:base="https://sudo-prem.github.io/posts/first-post/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;body&quot;&gt;Body&lt;a class=&quot;zola-anchor&quot; href=&quot;#body&quot; aria-label=&quot;Anchor link for: body&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the end of my first post.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Second Post</title>
+		<published>2024-10-27T00:00:00+00:00</published>
+		<updated>2024-10-27T00:00:00+00:00</updated>
+		<link rel="alternate" type="text/html" href="https://sudo-prem.github.io/posts/second-post/"/>
+		<id>https://sudo-prem.github.io/posts/second-post/</id>
+    
+		<content type="html" xml:base="https://sudo-prem.github.io/posts/second-post/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;a class=&quot;zola-anchor&quot; href=&quot;#introduction&quot; aria-label=&quot;Anchor link for: introduction&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;body&quot;&gt;Body&lt;a class=&quot;zola-anchor&quot; href=&quot;#body&quot; aria-label=&quot;Anchor link for: body&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusion&quot; aria-label=&quot;Anchor link for: conclusion&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the end of my second post.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
