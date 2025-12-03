@@ -1,1 +1,1 @@
-Static site made using Zola.
+zola markdown static site
