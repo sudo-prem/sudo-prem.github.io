@@ -15,6 +15,11 @@ subtitle = "Knowledge Base"
 
 [[collection]]
 type = "entry"
+title = "OpenCode"
+subtitle = "Coding Agent"
+
+[[collection]]
+type = "entry"
 title = "Zed"
 subtitle = "Code Editor"
 
