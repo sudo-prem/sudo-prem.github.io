@@ -6,7 +6,7 @@ footer = true
 name = "Premnaath Varadharajan"
 id = "sudo-prem"
 bio = "🌴 On vacation"
-avatar = "img/avatar.webp"
+avatar = "img/misc/avatar.webp"
 links = [
     { name = "Email", icon = "email", url = "mailto:premnaathvaradharajan@gmail.com" },
     { name = "GitHub", icon = "github", url = "https://github.com/sudo-prem" },
