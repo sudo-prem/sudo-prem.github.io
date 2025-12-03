@@ -5,7 +5,7 @@ template = "prose.html"
 
 [extra]
 title = "Picks"
-subtitle = "Things I like"
+subtitle = "Curated gems from my digital treasure hunt"
 +++
 
 Tools

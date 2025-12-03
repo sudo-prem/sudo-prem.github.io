@@ -5,7 +5,7 @@ template = "prose.html"
 
 [extra]
 title = "Work"
-subtitle = "Code and Curiosity"
+subtitle = "Debugging life, one commit at a time"
 +++
 {{ collection(file="experience.toml") }}
 

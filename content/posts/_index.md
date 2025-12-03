@@ -9,7 +9,7 @@ generate_feeds = true
 
 [extra]
 title = "Posts"
-subtitle = "I write about ...."
+subtitle = "Where curiosity meets keyboard"
 date_format = "%b %-d, %Y"
 categorized = false
 back_to_top = true
