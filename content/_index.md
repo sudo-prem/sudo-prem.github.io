@@ -13,7 +13,7 @@ links = [
     { name = "LinkedIn", icon = "linkedin", url = "https://linkedin.com/in/premnaath" },
     { name = "Twitter", icon = "twitter", url = "https://x.com/sudo_prem" },
 ]
-recent = true
+recent = false
 recent_max = 15
 recent_more_text = "more »"
 date_format = "%b %-d, %Y"
