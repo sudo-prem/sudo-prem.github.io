@@ -32,7 +32,7 @@ anchors = "on"
 
 [extra]
 sections = [
-	# { name = "Posts", path = "/posts", is_external = false },
+	{ name = "Posts", path = "/posts", is_external = false },
 	{ name = "Work", path = "/work", is_external = false },
 	{ name = "Resume", path = "/resume", is_external = false },
 	{ name = "Picks", path = "/picks", is_external = false }
