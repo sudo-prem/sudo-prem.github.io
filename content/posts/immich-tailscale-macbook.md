@@ -1,7 +1,7 @@
 +++
 title = "Resurrecting a MacBook: Building a Private Cloud with Immich & Tailscale"
 description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self-hosted Google Photos alternative in one afternoon."
-date = 2026-01-07
+date = 2026-01-09
 categories = ["self-hosting", "docker", "DIY"]
 tags = ["immich", "tailscale", "colima", "macos", "homelab"]
 toc = true
@@ -13,7 +13,7 @@ We all have one: that aging laptop sitting in a drawer, too slow for daily work 
 
 The stack is simple but powerful: **Immich** (the best open-source alternative to Google Photos) running on **Docker**, exposed securely via **Tailscale**.
 
-![Photo of the old MacBook setup on a desk](/img/posts/macbook-setup-shot.jpg)
+![Photo of the old MacBook setup on a desk](/img/posts/macbook-setup-shot.png)
 *The hardware: An old MacBook ready for its new life as a server.*
 
 ## Part 1: The Engine (Immich Setup)
@@ -32,21 +32,9 @@ wget -O .env [https://github.com/immich-app/immich/releases/latest/download/exam
 ### 2. Configuration & Secrets
 The `.env` file controls the show. I tweaked the defaults to secure the database and point the storage to a dedicated local folder.
 
-**My `.env` adjustments:**
-```bash
-# Security First
-IMMICH_ADMIN_PASSWORD=strong-password-here
-DB_PASSWORD=strong-db-password
+> Update IMMICH_ADMIN_PASSWORD and DB_PASSWORD with strong passwords, set the UPLOAD_LOCATION and DB_DATA_LOCATION paths to your preferred local directories, and configure your timezone in TZ.
 
-# Data Persistence
-UPLOAD_LOCATION=/Users/your-username/immich-app/upload
-DB_DATA_LOCATION=/Users/your-username/immich-app/postgres
-
-# Localization
-TZ=America/Los_Angeles
-```
-
-![Screenshot of the code editor showing the .env configuration](/img/posts/env-config-editor.png)
+![Screenshot of diff showing the .env configuration](/img/posts/env-config-editor.png)
 *Configuring the environment variables for security and storage.*
 
 ### 3. The macOS "Gotcha" (Colima Users Read This)
@@ -93,7 +81,7 @@ I now have a robust, AI-powered photo management system running on hardware I al
 * **Privacy:** My data never leaves my hardware.
 * **Access:** Using the Immich mobile app, I can back up photos from anywhere as if I were sitting next to the server.
 
-![Screenshot of the Immich Dashboard populated with photos](/img/posts/immich-final-dashboard.jpg)
+![Screenshot of the Immich Dashboard populated with photos](/img/posts/immich-final-dashboard.png)
 *Success: The Immich dashboard running smoothly on the resurrected Mac.*
 
 If you have an old laptop gathering dust, this is the sign you've been waiting for. Wipe it, Dockerize it, and reclaim your digital memories.
