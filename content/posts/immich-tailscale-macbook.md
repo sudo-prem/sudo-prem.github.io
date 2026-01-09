@@ -1,6 +1,6 @@
 +++
-title = "Resurrecting a MacBook: Building a Private Cloud with Immich & Tailscale"
-description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self-hosted Google Photos alternative in one afternoon."
+title = "Building a Private Cloud with Immich & Tailscale"
+description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self-hosted Google Photos alternative."
 date = 2026-01-09
 categories = ["self-hosting", "docker", "DIY"]
 tags = ["immich", "tailscale", "colima", "macos", "homelab"]
