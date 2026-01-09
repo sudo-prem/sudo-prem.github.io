@@ -1,161 +1,99 @@
 +++
-title = "Breathing New Life into an Old MacBook with Immich and Tailscale"
-description = "How I turned an unused MacBook into a personal photo server using Immich and Tailscale for secure remote access."
+title = "Resurrecting a MacBook: Building a Private Cloud with Immich & Tailscale"
+description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self-hosted Google Photos alternative in one afternoon."
 date = 2026-01-07
-categories = ["self-hosting", "docker", "photography"]
-tags = ["immich", "tailscale", "docker", "macos", "self-hosting"]
+categories = ["self-hosting", "docker", "DIY"]
+tags = ["immich", "tailscale", "colima", "macos", "homelab"]
 toc = true
 +++
 
-## The Beginning: An Unused MacBook
+## From Paperweight to Private Cloud
 
-I had an old MacBook sitting around, collecting dust. Instead of letting it go to waste, I decided to turn it into a personal photo server. My goal was to create a secure, self-hosted photo management solution that I could access from anywhere.
+We all have one: that aging laptop sitting in a drawer, too slow for daily work but too valuable to toss. I decided to give my old MacBook a second life. The goal? A completely private, self-hosted photo server accessible from anywhere in the world—without paying a cent in subscription fees.
 
-## Choosing the Right Tools
+The stack is simple but powerful: **Immich** (the best open-source alternative to Google Photos) running on **Docker**, exposed securely via **Tailscale**.
 
-After some research, I settled on **Immich** - a powerful open-source photo management tool - and **Tailscale** for secure remote access. This combination would give me a private Google Photos alternative with enterprise-grade security.
+![Photo of the old MacBook setup on a desk](/img/posts/macbook-setup-shot.jpg)
+*The hardware: An old MacBook ready for its new life as a server.*
 
-## Setting Up Immich
+## Part 1: The Engine (Immich Setup)
 
-### Initial Setup
+Immich is heavy-duty software, but setting it up via Docker is surprisingly straightforward.
 
-First, I created a dedicated directory for the Immich setup:
+### 1. Prepping the Environment
+I created a home for the app and grabbed the official Docker configuration files:
 
 ```bash
-mkdir ./immich-app
-cd ./immich-app
+mkdir ./immich-app && cd ./immich-app
+wget -O docker-compose.yml [https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml](https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml)
+wget -O .env [https://github.com/immich-app/immich/releases/latest/download/example.env](https://github.com/immich-app/immich/releases/latest/download/example.env)
 ```
 
-Then I downloaded the latest Docker Compose configuration:
+### 2. Configuration & Secrets
+The `.env` file controls the show. I tweaked the defaults to secure the database and point the storage to a dedicated local folder.
 
+**My `.env` adjustments:**
 ```bash
-wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
-wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
-```
+# Security First
+IMMICH_ADMIN_PASSWORD=strong-password-here
+DB_PASSWORD=strong-db-password
 
-### Configuration
-
-The `.env` file contains all the configuration variables that Immich uses when starting up. Here's what each key setting does:
-
-**IMMICH_ADMIN_PASSWORD**: This is the password for the admin account that gets created when you first access Immich. The default is weak, so you should change it to something secure.
-
-**UPLOAD_LOCATION**: This tells Immich where to store your uploaded photos and videos. By default it might use a generic path, but we want to point it to our dedicated `upload` directory.
-
-**DB_PASSWORD/DB_USERNAME/DB_DATABASE_NAME**: These are the PostgreSQL database credentials. The default password is not secure, so you should generate a strong one and set a custom username.
-
-**DB_DATA_LOCATION**: This is where the PostgreSQL database files are stored. We're pointing it to our `postgres` directory to keep everything organized.
-
-**TZ**: This sets the timezone for the Immich server, which affects how photo timestamps are displayed and processed.
-
-Here are the specific changes I made to the `.env` file:
-
-```bash
-# Admin password for initial setup
-IMMICH_ADMIN_PASSWORD=your-secure-password-here
-
-# Custom storage location for photos
+# Data Persistence
 UPLOAD_LOCATION=/Users/your-username/immich-app/upload
-
-# Database settings
-DB_PASSWORD=your-database-password
-DB_USERNAME=immich
-DB_DATABASE_NAME=immich
 DB_DATA_LOCATION=/Users/your-username/immich-app/postgres
 
-# Timezone settings
+# Localization
 TZ=America/Los_Angeles
 ```
 
-Key changes made:
-- Set a strong admin password for the Immich web interface
-- Configured upload location to use the dedicated directory we created
-- Updated database credentials for security
-- Set the correct timezone for proper photo metadata handling
+![Screenshot of the code editor showing the .env configuration](/img/posts/env-config-editor.png)
+*Configuring the environment variables for security and storage.*
 
-### macOS Docker Considerations
+### 3. The macOS "Gotcha" (Colima Users Read This)
+Since I run **Colima** instead of Docker Desktop, standard bind mounts can cause permission headaches. I modified `docker-compose.yml` to use named volumes for the database, ensuring stability.
 
-Since I'm using Colima instead of Docker Desktop on macOS, I had to make some adjustments to avoid permission issues. The default Docker Compose file uses bind mounts, which can be problematic on macOS.
-
-I created the necessary directories first:
-
-```bash
-mkdir -p postgres upload library
-```
-
-Then modified the `docker-compose.yml` to use Docker volumes instead of bind mounts:
+> **The Fix:** Change the postgres volume from a direct path to a named volume.
 
 ```yaml
-# Changed from:
-- ${DB_DATA_LOCATION}:/var/lib/postgresql/data
+services:
+  database:
+    volumes:
+      - pgdata:/var/lib/postgresql/data # Changed from direct path
 
-# To:
-- pgdata:/var/lib/postgresql/data
-
-# And added the volume definition:
 volumes:
-  pgdata:
+  pgdata: # Define the volume at the bottom
   model-cache:
 ```
 
-While the documentation warns against editing the database volume line, this change is necessary on macOS with Colima to avoid permission issues with bind mounts.
-
-### Launching Immich
-
-With everything configured, I started the services:
-
+With the config patched, I fired it up:
 ```bash
 docker compose up -d
 ```
 
-Immich was now running on port 2283, accessible on my local network using `ipconfig getifaddr en0:2283`.
+## Part 2: The Teleporter (Tailscale Access)
 
-## Making It Accessible Anywhere with Tailscale
+Getting Immich running locally is easy; securely accessing it from a coffee shop is usually hard. **Tailscale** makes it trivial.
 
-Local access was great, but I wanted to access my photos from anywhere. This is where Tailscale came in.
-
-### Installing Tailscale
-
-```bash
-brew install --cask tailscale-app
-```
-
-After installation, I:
-- Opened the Tailscale app
-- Authenticated and logged in
-- Granted the necessary system permissions for network access and VPN functionality
-
-### Serving Immich Over Tailscale
-
-The magic happened with a single command:
+I installed the Tailscale macOS client, logged in, and ran a single "magic" command in the terminal:
 
 ```bash
 tailscale serve 2283
 ```
 
-This command exposes my local Immich instance over the Tailscale network, making it accessible from any device connected to my Tailnet.
+![Screenshot of the terminal running the tailscale serve command](/img/posts/tailscale-terminal.png)
+*One command to expose the local server to my private network.*
 
-### Verifying Peer-to-Peer Functionality
-
-I tested the setup to ensure Tailscale was working in true peer-to-peer mode (not master-slave). I had another device already serving a different service on the same Tailnet, and I could access both services simultaneously from a third device. This confirmed that Tailscale's peer-to-peer architecture was working correctly.
+Just like that, my local Immich instance (running on port 2283) was instantly accessible to every device on my Tailnet. No port forwarding, no firewall headaches, just an encrypted peer-to-peer tunnel.
 
 ## The Result
 
-I now have a fully functional, private photo server running on my old MacBook. I can access all my photos securely from anywhere in the world, and the setup is completely self-hosted and under my control.
+I now have a robust, AI-powered photo management system running on hardware I already owned.
 
-![Immich dashboard placeholder](/img/misc/immich-dashboard.png)
+* **Speed:** Local network uploads are blazing fast.
+* **Privacy:** My data never leaves my hardware.
+* **Access:** Using the Immich mobile app, I can back up photos from anywhere as if I were sitting next to the server.
 
-*The Immich dashboard running on my MacBook*
+![Screenshot of the Immich Dashboard populated with photos](/img/posts/immich-final-dashboard.jpg)
+*Success: The Immich dashboard running smoothly on the resurrected Mac.*
 
-![Tailscale status placeholder](/img/misc/tailscale-status.png)
-
-*Tailscale showing connected devices*
-
-## Why This Setup Works
-
-1. **Cost-effective**: Repurposed existing hardware
-2. **Secure**: Tailscale provides encrypted, peer-to-peer connections
-3. **Private**: All data stays on my own hardware
-4. **Accessible**: Available from anywhere with an internet connection
-5. **Feature-rich**: Immich offers AI-powered search, facial recognition, and more
-
-If you have old hardware lying around, consider giving it new life with a similar setup. The combination of Docker, self-hosted applications, and Tailscale opens up endless possibilities for personal infrastructure.
+If you have an old laptop gathering dust, this is the sign you've been waiting for. Wipe it, Dockerize it, and reclaim your digital memories.
