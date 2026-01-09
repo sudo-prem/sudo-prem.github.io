@@ -73,6 +73,20 @@ tailscale serve 2283
 
 Just like that, my local Immich instance (running on port 2283) was instantly accessible to every device on my Tailnet. No port forwarding, no firewall headaches, just an encrypted peer-to-peer tunnel.
 
+## One Last Tweak: The Insomniac Mac
+
+Since this MacBook will likely live on a shelf with its lid closed ("headless" mode), we need to ensure macOS doesn't suspend the system the moment we shut it.
+
+Run this command to prevent the Mac from ever sleeping:
+
+```bash
+sudo pmset -a disablesleep 1
+```
+
+Now you can close the lid, tuck the laptop away, and it will keep running 24/7.
+
+> **To Revert:** If you ever want to use this as a normal laptop again, just run `sudo pmset -a disablesleep 0` to restore normal sleep behavior.
+
 ## The Result
 
 I now have a robust, AI-powered photo management system running on hardware I already owned.
