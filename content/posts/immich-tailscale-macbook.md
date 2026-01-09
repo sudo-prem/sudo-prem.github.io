@@ -1,6 +1,6 @@
 +++
 title = "Building a Private Cloud with Immich & Tailscale"
-description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self-hosted Google Photos alternative."
+description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self hosted Google Photos alternative."
 date = 2026-01-09
 categories = ["self-hosting", "docker", "DIY"]
 tags = ["immich", "tailscale", "colima", "macos", "homelab"]
@@ -9,7 +9,7 @@ toc = true
 
 ## From Paperweight to Private Cloud
 
-We all have one: that aging laptop sitting in a drawer, too slow for daily work but too valuable to toss. I decided to give my old MacBook a second life. The goal? A completely private, self-hosted photo server accessible from anywhere in the world—without paying a cent in subscription fees.
+We all have one: that aging laptop sitting in a drawer, too slow for daily work but too valuable to toss. I decided to give my old MacBook a second life. The goal? A completely private, self hosted photo server accessible from anywhere in the world without paying a cent in subscription fees.
 
 The stack is simple but powerful: **Immich** (the best open-source alternative to Google Photos) running on **Docker**, exposed securely via **Tailscale**.
 
@@ -18,7 +18,7 @@ The stack is simple but powerful: **Immich** (the best open-source alternative t
 
 ## Part 1: The Engine (Immich Setup)
 
-Immich is heavy-duty software, but setting it up via Docker is surprisingly straightforward.
+Immich is heavy duty software, but setting it up via Docker is surprisingly straightforward.
 
 ### 1. Prepping the Environment
 I created a home for the app and grabbed the official Docker configuration files:
