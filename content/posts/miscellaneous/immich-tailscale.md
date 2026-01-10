@@ -1,6 +1,6 @@
 +++
-title = "Building a Private Cloud with Immich & Tailscale"
-description = "Don't let that old Mac collect dust. Here's how I turned mine into a secure, self hosted Google Photos alternative."
+title = "Private Photo Server with Immich & Tailscale"
+description = "Turn old hardware into a secure, private photo and video server using Immich and Tailscale."
 date = 2026-01-09
 categories = ["self-hosting", "docker", "DIY"]
 tags = ["immich", "tailscale", "colima", "macos", "homelab"]
@@ -24,8 +24,8 @@ I created a home for the app and grabbed the official Docker configuration files
 
 ```bash
 mkdir ./immich-app && cd ./immich-app
-wget -O docker-compose.yml [https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml](https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml)
-wget -O .env [https://github.com/immich-app/immich/releases/latest/download/example.env](https://github.com/immich-app/immich/releases/latest/download/example.env)
+wget -O docker-compose.yml https://github.com/immich-app/immich/releases/latest/download/docker-compose.yml
+wget -O .env https://github.com/immich-app/immich/releases/latest/download/example.env
 ```
 
 ### Configuration & Secrets
