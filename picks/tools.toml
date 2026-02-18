@@ -1,0 +1,44 @@
+[[collection]]
+type = "entry"
+title = "Neovim"
+subtitle = "Code Editor"
+
+[[collection]]
+type = "entry"
+title = "WezTerm"
+subtitle = "Terminal Emulator"
+
+[[collection]]
+type = "entry"
+title = "Obsidian"
+subtitle = "Knowledge Base"
+
+[[collection]]
+type = "entry"
+title = "OpenCode"
+subtitle = "Coding Agent"
+
+[[collection]]
+type = "entry"
+title = "Zed"
+subtitle = "Code Editor"
+
+[[collection]]
+type = "entry"
+title = "Brave"
+subtitle = "Web Browser"
+
+[[collection]]
+type = "entry"
+title = "Alfred"
+subtitle = "Launcher"
+
+[[collection]]
+type = "entry"
+title = "BetterTouchTool"
+subtitle = "Automation"
+
+[[collection]]
+type = "entry"
+title = "DBeaver"
+subtitle = "DB Manager"
