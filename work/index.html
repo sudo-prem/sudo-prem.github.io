@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  
+    
+  <meta name="description" content="Code and Curiosity">
+<link rel="canonical" href="https://sudo-prem.github.io/work/">
+<meta property="og:site_name" content="sudo-log">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work">
+<meta property="og:description" content="Code and Curiosity">
+<meta property="og:url" content="https://sudo-prem.github.io/work/">
+<meta property="og:locale" content="en">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Work">
+<meta name="twitter:description" content="Code and Curiosity">
+
+
+
+  <title>Work</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://sudo-prem.github.io/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://sudo-prem.github.io/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://sudo-prem.github.io/img/apple-touch-icon.png">
+  
+  <style>
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #5871a210;
+    --bg-color: #ffffff;
+    --text-color: #2f3030;
+    --text-pale-color: #767676;
+    --text-decoration-color: #a9a9a9;
+    --highlight-mark-color: #5f75b020;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #268556;
+    --callout-important-color: #885fc9;
+    --callout-warning-color: #ab6632;
+    --callout-caution-color: #c64e4e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #6f8fd112;
+    --bg-color: #1c1c1c;
+    --text-color: #c1c1c1;
+    --text-pale-color: #848484;
+    --text-decoration-color: #5f5f5f;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #47976f;
+    --callout-important-color: #9776cd;
+    --callout-warning-color: #ad7a52;
+    --callout-caution-color: #d06161;
+  }
+
+  body.homepage #info #id {
+    text-decoration: none;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 60px;
+    --font-size: 14.4px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+  /* Post headings styling */
+  main.layout-list .category {
+    font-size: 1.15em !important;
+    margin-top: 2.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+
+  /* Horizontal lines between post segments */
+  main.layout-list .post-list {
+    position: relative;
+  }
+
+  main.layout-list .post-list:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--text-decoration-color);
+    margin: 2em 0;
+    opacity: 0.5;
+  }
+</style>
+
+  <link rel="stylesheet" href="https://sudo-prem.github.io/main.css">
+  
+
+<link id="hl" rel="stylesheet" type="text/css" href="/giallo-light.css" />
+
+
+
+
+  
+</head>
+
+<body class="prose-page">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://sudo-prem.github.io/giallo-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <main>
+    
+<header>
+  <nav>
+    <a id="back-link" href="https://sudo-prem.github.io">← Back</a>
+  </nav>
+</header>
+
+    
+<div class="section-title">
+  
+  <h1>Work</h1>
+  
+  
+  <p>Debugging life, one commit at a time</p>
+  
+</div>
+
+
+    <div>
+      
+      
+      <article class="prose">
+        <div class="collection layout-card flow-stack"><div class="item"><div class="body">
+<div class="meta"><span class="icon"><img class="no-lightense" src="/img/logos/aws.svg" alt="" width="16" height="16"></span><a class="title" href="https://aws.amazon.com" target="_blank" rel="noreferrer noopener"><span>Amazon Web Services</span></a><span class="badge">May 2026 – Aug 2026</span></div><div class="subtitle">Software Development Engineer Intern</div><div class="content">
+<ul>
+<li>Architected a write-through memcache layer for Amazon Athena's highest-volume read API using Java and Spring, reducing DynamoDB read capacity consumption by over 50%.</li>
+<li>Built an AWS Lambda cache invalidator triggered by DynamoDB Streams to keep data fresh across upstream writers without modifying external packages.</li>
+<li>Implemented token refunds in the Coral service chain, quadrupling throughput for repeat reads without raising per-account throttle limits.</li>
+<li>Deployed the architecture with AWS CDK across 37 gamma regions and one production region, with CloudWatch EMF metrics and a six-alarm composite.</li>
+</ul>
+</div><div class="tags"><span class="tag"><span>#</span>caching</span><span class="tag"><span>#</span>lambda</span><span class="tag"><span>#</span>dynamodb</span><span class="tag"><span>#</span>aws-cdk</span><span class="tag"><span>#</span>observability</span></div></div>
+</div><div class="item"><div class="body">
+<div class="meta"><span class="icon"><img class="no-lightense" src="/img/logos/oracle.jpeg" alt="" width="16" height="16"></span><a class="title" href="https://www.oracle.com" target="_blank" rel="noreferrer noopener"><span>Oracle</span></a><span class="badge">Jan 2023 – Mar 2025</span></div><div class="subtitle">Software Developer</div><div class="content">
+<ul>
+<li>Developed a complete integration of Oracle’s proprietary DataGrid component with Microsoft Excel, creating a reusable library that streamlined development for other engineers (AXCellence Award).</li>
+<li>Optimized performance of Aconex suite modules by using thread pools for concurrency and progressive loading for lazy UI, cutting load times by about 27% and making workflows more efficient.</li>
+<li>Participated in customer meetings to brainstorm use cases and turn them into practical, production-ready features.</li>
+<li>Handled DevOps tasks, including containerizing applications and creating deployment pipelines.</li>
+<li>Developed a panning canvas from scratch to enable navigation across complex screens using mouse drag.</li>
+</ul>
+</div><div class="tags"><span class="tag"><span>#</span>backend</span><span class="tag"><span>#</span>java</span><span class="tag"><span>#</span>devops</span><span class="tag"><span>#</span>ui</span></div></div>
+</div><div class="item"><div class="body">
+<div class="meta"><span class="icon"><img class="no-lightense" src="/img/logos/coral.jpeg" alt="" width="16" height="16"></span><a class="title" href="https://www.coralacademy.com" target="_blank" rel="noreferrer noopener"><span>Coral Academy</span></a><span class="badge">Jun 2024 – Feb 2025</span></div><div class="subtitle">Lead Backend Engineer (Part-time)</div><div class="content">
+<ul>
+<li>Led a team of four in backend development for an early-stage K-12 edtech startup.</li>
+<li>Integrated Stripe for payments and Zoom for calls while optimizing data handling using Supabase, Deno, and PostgreSQL.</li>
+<li>Designed scalable database schemas and helped architect the application based on product requirements documents (PRDs).</li>
+</ul>
+</div><div class="tags"><span class="tag"><span>#</span>backend</span><span class="tag"><span>#</span>deno</span><span class="tag"><span>#</span>supabase</span><span class="tag"><span>#</span>postgresql</span><span class="tag"><span>#</span>stripe</span><span class="tag"><span>#</span>edtech</span></div></div>
+</div></div>
+<hr />
+<div class="collection layout-card flow-stack"><div class="item"><div class="body">
+<div class="meta"><span class="icon"><img class="no-lightense" src="/img/logos/usc.jpeg" alt="" width="16" height="16"></span><a class="title" href="https://www.usc.edu" target="_blank" rel="noreferrer noopener"><span>University of Southern California</span></a><span class="badge">2025-2026</span></div><div class="subtitle">M.S. in Computer Science</div></div>
+</div><div class="item"><div class="body">
+<div class="meta"><span class="icon"><img class="no-lightense" src="/img/logos/ceg.jpeg" alt="" width="16" height="16"></span><a class="title" href="https://ceg.annauniv.edu/" target="_blank" rel="noreferrer noopener"><span>College of Engineering, Guindy</span></a><span class="badge">2019-2023</span></div><div class="subtitle">B.Tech in Information Technology</div></div>
+</div></div>
+<hr />
+<div class="collection layout-row flow-stack"><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/raft-kv" target="_blank" rel="noreferrer noopener"><span>Linearizable Distributed KV Store</span></a></span><span class="subtitle">C++ and gRPC key-value store implementing Raft consensus, linearizable operations, duplicate suppression, and partition recovery</span><span class="badge">2026</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/dotfiles" target="_blank" rel="noreferrer noopener"><span>dotfiles</span></a></span><span class="subtitle">Terminal and editor config files for consistent setup across machines</span><span class="badge">2025</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/sequence-aligner" target="_blank" rel="noreferrer noopener"><span>Linear Space Sequence Aligner</span></a></span><span class="subtitle">Hirschberg's algorithm for O(min(m,n)) space complexity</span><span class="badge">2024</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/pdf-wiser" target="_blank" rel="noreferrer noopener"><span>PDF Wiser</span></a></span><span class="subtitle">RAG-powered web app for Q&amp;A over PDF documents</span><span class="badge">2024</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/multitask-offloader" target="_blank" rel="noreferrer noopener"><span>Multitask Offloader</span></a></span><span class="subtitle">Edge computing offloading algorithm achieving 40% faster mobile computation</span><span class="badge">2023</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/DSA" target="_blank" rel="noreferrer noopener"><span>Data Structures and Algorithms</span></a></span><span class="subtitle">C++ reference and practice repository</span><span class="badge">2023</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/Bin-Classifier" target="_blank" rel="noreferrer noopener"><span>Bin Classifier</span></a></span><span class="subtitle">Swiftify app using MobileNetV2 for waste classification and bin suggestions</span><span class="badge">2022</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/covid-vaccinator-bot" target="_blank" rel="noreferrer noopener"><span>Covid Vaccinator Bot</span></a></span><span class="subtitle">Telegram bot for finding COVID-19 vaccination slots via Co-WIN API</span><span class="badge">2021</span></span><span class="item">
+<span class="main"><a class="title" href="https://github.com/sudo-prem/bloghub" target="_blank" rel="noreferrer noopener"><span>BlogHub</span></a></span><span class="subtitle">Django blogging app with authentication, posts, and comments</span><span class="badge">2020</span></span></div>
+
+      </article>
+
+      
+      
+
+      
+      
+    </div>
+
+    
+
+<footer>
+  <div class="left">
+    <div class="copyright">
+      © 2026 Premnaath Varadharajan
+      
+    </div>
+  </div>
+
+  <div class="right">
+    
+
+    
+    
+    
+    <button id="theme-toggle" aria-label="theme switch">
+      <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+      <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+    </button>
+    
+  </div>
+</footer>
+
+
+
+  </main>
+</div>
+
+  
+<script src="/js/lightense.min.js"></script>
+
+
+
+  <script src="https://sudo-prem.github.io/js/main.js"></script>
+</body>
+
+</html>

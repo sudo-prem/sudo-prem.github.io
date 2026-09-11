@@ -1,0 +1,23 @@
+layout = "card"
+
+[[item]]
+icon = "/img/logos/usc.jpeg"
+title = "University of Southern California"
+link = "https://www.usc.edu"
+subtitle = "M.S. in Computer Science"
+badge = "2025-2026"
+content = ""
+
+[[item]]
+icon = "/img/logos/ceg.jpeg"
+title = "College of Engineering, Guindy"
+link = "https://ceg.annauniv.edu/"
+subtitle = "B.Tech in Information Technology"
+badge = "2019-2023"
+content = ""
+
+# [[item]]
+# icon = "/img/logos/mirs.jpeg"
+# title = "Maharishi International Residential School"
+# subtitle = "Higher Secondary (86%) · Secondary School (CGPA 10/10)"
+# badge = "2014-2018"

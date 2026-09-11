@@ -1,0 +1,68 @@
+layout = "row"
+flow = "stack"
+
+[[item]]
+title = "Linearizable Distributed KV Store"
+link = "https://github.com/sudo-prem/raft-kv"
+subtitle = "C++ and gRPC key-value store implementing Raft consensus, linearizable operations, duplicate suppression, and partition recovery"
+badge = "2026"
+
+[[item]]
+title = "dotfiles"
+link = "https://github.com/sudo-prem/dotfiles"
+subtitle = "Terminal and editor config files for consistent setup across machines"
+badge = "2025"
+
+[[item]]
+title = "Linear Space Sequence Aligner"
+link = "https://github.com/sudo-prem/sequence-aligner"
+subtitle = "Hirschberg's algorithm for O(min(m,n)) space complexity"
+badge = "2024"
+
+[[item]]
+title = "PDF Wiser"
+link = "https://github.com/sudo-prem/pdf-wiser"
+subtitle = "RAG-powered web app for Q&A over PDF documents"
+badge = "2024"
+
+[[item]]
+title = "Multitask Offloader"
+link = "https://github.com/sudo-prem/multitask-offloader"
+subtitle = "Edge computing offloading algorithm achieving 40% faster mobile computation"
+badge = "2023"
+
+[[item]]
+title = "Data Structures and Algorithms"
+link = "https://github.com/sudo-prem/DSA"
+subtitle = "C++ reference and practice repository"
+badge = "2023"
+
+[[item]]
+title = "Bin Classifier"
+link = "https://github.com/sudo-prem/Bin-Classifier"
+subtitle = "Swiftify app using MobileNetV2 for waste classification and bin suggestions"
+badge = "2022"
+
+# [[item]]
+# title = "Flask Project Template"
+# link = "https://github.com/sudo-prem/flask-project-template"
+# subtitle = "Flask web application starter template with sensible defaults"
+# badge = "2022"
+
+[[item]]
+title = "Covid Vaccinator Bot"
+link = "https://github.com/sudo-prem/covid-vaccinator-bot"
+subtitle = "Telegram bot for finding COVID-19 vaccination slots via Co-WIN API"
+badge = "2021"
+
+# [[item]]
+# title = "Heart Disease Classifier"
+# link = "https://github.com/sudo-prem/heart-disease-classifier"
+# subtitle = "ML model predicting heart disease from clinical parameters with 90% accuracy"
+# badge = "2021"
+
+[[item]]
+title = "BlogHub"
+link = "https://github.com/sudo-prem/bloghub"
+subtitle = "Django blogging app with authentication, posts, and comments"
+badge = "2020"
