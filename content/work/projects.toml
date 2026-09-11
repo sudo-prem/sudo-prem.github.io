@@ -1,70 +1,68 @@
-[[collection]]
-type = "card_simple"
+layout = "row"
+flow = "stack"
+
+[[item]]
+title = "Linearizable Distributed KV Store"
+link = "https://github.com/sudo-prem/raft-kv"
+subtitle = "C++ and gRPC key-value store implementing Raft consensus, linearizable operations, duplicate suppression, and partition recovery"
+badge = "2026"
+
+[[item]]
 title = "dotfiles"
 link = "https://github.com/sudo-prem/dotfiles"
-content = "Terminal and editor config files for consistent setup across machines"
-date = "2025"
+subtitle = "Terminal and editor config files for consistent setup across machines"
+badge = "2025"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Linear Space Sequence Aligner"
 link = "https://github.com/sudo-prem/sequence-aligner"
-content = "Hirschberg's algorithm for O(min(m,n)) space complexity"
-date = "2024"
+subtitle = "Hirschberg's algorithm for O(min(m,n)) space complexity"
+badge = "2024"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "PDF Wiser"
 link = "https://github.com/sudo-prem/pdf-wiser"
-content = "RAG-powered web app for Q&A over PDF documents"
-date = "2024"
+subtitle = "RAG-powered web app for Q&A over PDF documents"
+badge = "2024"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Multitask Offloader"
 link = "https://github.com/sudo-prem/multitask-offloader"
-content = "Edge computing offloading algorithm achieving 40% faster mobile computation"
-date = "2023"
+subtitle = "Edge computing offloading algorithm achieving 40% faster mobile computation"
+badge = "2023"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Data Structures and Algorithms"
 link = "https://github.com/sudo-prem/DSA"
-content = "C++ reference and practice repository"
-date = "2023"
+subtitle = "C++ reference and practice repository"
+badge = "2023"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Bin Classifier"
 link = "https://github.com/sudo-prem/Bin-Classifier"
-content = "Swiftify app using MobileNetV2 for waste classification and bin suggestions"
-date = "2022"
+subtitle = "Swiftify app using MobileNetV2 for waste classification and bin suggestions"
+badge = "2022"
 
-# [[collection]]
-# type = "card_simple"
+# [[item]]
 # title = "Flask Project Template"
 # link = "https://github.com/sudo-prem/flask-project-template"
-# content = "Flask web application starter template with sensible defaults"
-# date = "2022"
+# subtitle = "Flask web application starter template with sensible defaults"
+# badge = "2022"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Covid Vaccinator Bot"
 link = "https://github.com/sudo-prem/covid-vaccinator-bot"
-content = "Telegram bot for finding COVID-19 vaccination slots via Co-WIN API"
-date = "2021"
+subtitle = "Telegram bot for finding COVID-19 vaccination slots via Co-WIN API"
+badge = "2021"
 
-# [[collection]]
-# type = "card_simple"
+# [[item]]
 # title = "Heart Disease Classifier"
 # link = "https://github.com/sudo-prem/heart-disease-classifier"
-# content = "ML model predicting heart disease from clinical parameters with 90% accuracy"
-# date = "2021"
+# subtitle = "ML model predicting heart disease from clinical parameters with 90% accuracy"
+# badge = "2021"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "BlogHub"
 link = "https://github.com/sudo-prem/bloghub"
-content = "Django blogging app with authentication, posts, and comments"
-date = "2020"
-
+subtitle = "Django blogging app with authentication, posts, and comments"
+badge = "2020"

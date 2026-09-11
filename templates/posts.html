@@ -1,4 +1,3 @@
-{% import "macros/prose.html" as macros %}
 {% extends "_base.html" %}
 
 {% block page %}blog{% endblock page%}
@@ -10,44 +9,50 @@
   {% else %}
     {% set desc = config.description %}
   {% endif %}
-  <meta name="description" content="{{ desc }}">
+  {%- if section.extra.lang %}{% set og_lang = section.extra.lang %}{% else %}{% set og_lang = section.lang %}{% endif -%}
+  {{ <seo config
+      title={section.title}
+      desc={desc}
+      url={section.permalink}
+      lang={og_lang} /> }}
 {% endblock desc %}
 
 {% block content %}
 <div id="wrapper">
-  {{ macros::back_link(path = get_url(path="/")) }}
+  {{ <back_link path={get_url(path="/")} config /> }}
   {% include "_section_title.html" %}
   <main class="layout-list">
-    
+    {% set date_format = section.extra.date_format if section.extra.date_format is defined else (config.extra.date_format if config.extra.date_format is defined else "%b %-d, %Y") %}
+
     {# Show root posts first (without headings) #}
     {% if section.pages | length > 0 %}
     <div class="post-list">
       {% for post in section.pages | sort(attribute="date") | reverse %}
       <a class="post instant {% if post.extra.featured %}featured{% endif %}" href="{{ post.permalink }}">
         <span>{{ post.title }}</span>
-        <span class="date">{{ post.date | date(format=section.extra.date_format) }}</span>
+        <span class="date">{{ post.date | date(format=date_format) }}</span>
       </a>
       {% endfor %}
     </div>
     {% endif %}
-    
+
     {# Show subsections with headings #}
     {% for subsection_path in section.subsections | sort %}
       {% set subsection = get_section(path=subsection_path) %}
-      
+
       {% if subsection.pages | length > 0 %}
       <h2 class="category">{{ subsection.title }}</h2>
       <div class="post-list categorized">
         {% for post in subsection.pages | sort(attribute="date") | reverse %}
         <a class="post instant {% if post.extra.featured %}featured{% endif %}" href="{{ post.permalink }}">
           <span>{{ post.title }}</span>
-          <span class="date">{{ post.date | date(format=section.extra.date_format) }}</span>
+          <span class="date">{{ post.date | date(format=date_format) }}</span>
         </a>
         {% endfor %}
       </div>
       {% endif %}
     {% endfor %}
-    
+
   </main>
   {% include "_footer.html" %}
 </div>

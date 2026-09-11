@@ -2,8 +2,12 @@
 title = "Private Photo Server with Immich & Tailscale"
 description = "Turn old hardware into a secure, private photo and video server using Immich and Tailscale."
 date = 2026-01-09
+
+[taxonomies]
 categories = ["self-hosting", "docker", "DIY"]
 tags = ["immich", "tailscale", "colima", "macos", "homelab"]
+
+[extra]
 toc = true
 +++
 

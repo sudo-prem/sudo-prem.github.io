@@ -2,8 +2,7 @@
 title = "Miscellaneous"
 description = "Various projects and experiments"
 sort_by = "date"
-template = "section.html"
-paginate_by = 10
+template = "posts.html"
 
 [extra]
 title = "Miscellaneous"
@@ -12,5 +11,5 @@ date_format = "%b %-d, %Y"
 back_to_top = true
 toc = true
 comment = false
-copy = true
+code_copy = true
 +++

@@ -9,10 +9,4 @@ subtitle = "Curated gems from my digital treasure hunt"
 +++
 
 Tools
-{{ collection(file="tools.toml") }}
-
-Books
-{{ collection(file="books.toml") }}
-
-Movies
-{{ collection(file="movies.toml") }}
+{{ <collection file="tools.toml" section /> }}

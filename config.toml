@@ -17,6 +17,7 @@ external_links_target_blank = false
 external_links_no_follow = true
 external_links_no_referrer = true
 smart_punctuation = false
+github_alerts = true
 
 [markdown.highlighting]
 style = "class"
@@ -29,15 +30,25 @@ taxonomies = "on"
 anchors = "on"
 
 [extra]
-sections = [
-	{ name = "Posts", path = "/posts", is_external = false },
-	{ name = "Work", path = "/work", is_external = false },
-	{ name = "Resume", path = "/resume", is_external = false },
-	{ name = "Picks", path = "/picks", is_external = false }
+nav = [
+	{ name = "Work", path = "/work" },
+	{ name = "Resume", path = "/resume" },
+	{ name = "Picks", path = "/picks" }
+]
+name = "Premnaath Varadharajan"
+handle = "sudo-prem"
+handle_url = "https://github.com/sudo-prem"
+bio = "🌴 On vacation"
+avatar = "img/misc/avatar.webp"
+links = [
+    { name = "Email", icon = "email", url = "mailto:premnaathvaradharajan@gmail.com" },
+    { name = "GitHub", icon = "github", url = "https://github.com/sudo-prem" },
+    { name = "LinkedIn", icon = "linkedin", url = "https://linkedin.com/in/premnaath" },
+    { name = "Twitter", icon = "twitter", url = "https://x.com/sudo_prem" },
 ]
 blog_section_path = "/posts"
 back_link_text = "Back"
-force_theme = false
+color_scheme = "auto"
 footer_copyright = "© 2026 Premnaath Varadharajan"
 footer_credits = false
 not_found_error_text = "404 Not Found"

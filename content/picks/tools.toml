@@ -1,44 +1,41 @@
-[[collection]]
-type = "entry"
+layout = "row"
+
+[[item]]
 title = "Neovim"
 subtitle = "Code Editor"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "WezTerm"
 subtitle = "Terminal Emulator"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Obsidian"
 subtitle = "Knowledge Base"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "OpenCode"
 subtitle = "Coding Agent"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Zed"
 subtitle = "Code Editor"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Brave"
 subtitle = "Web Browser"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Alfred"
 subtitle = "Launcher"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "BetterTouchTool"
 subtitle = "Automation"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "DBeaver"
 subtitle = "DB Manager"
+
+[[item]]
+title = "Transmission"
+subtitle = "BitTorrent Client"

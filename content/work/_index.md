@@ -7,12 +7,12 @@ template = "prose.html"
 title = "Work"
 subtitle = "Debugging life, one commit at a time"
 +++
-{{ collection(file="experience.toml") }}
+{{ <collection file="experience.toml" section /> }}
 
 ---
 
-{{ collection(file="education.toml") }}
+{{ <collection file="education.toml" section /> }}
 
 ---
 
-{{ collection(file="projects.toml") }}
+{{ <collection file="projects.toml" section /> }}
